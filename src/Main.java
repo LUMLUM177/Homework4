@@ -51,16 +51,12 @@ public class Main {
         }
     }
         public static void task5() {
-        int first = 0;
-        int second = 1;
-        int nextNumber = 0;
-        int previousNumber = first + second;
-        System.out.print(first);
-        for (int i = 0; i < 10; i++) {
+        int previousNumber = 0;
+        int nextNumber = 1;
+        for (int i = 0; i < 5; i++) {
+            System.out.print(previousNumber + " " + nextNumber + " ");
             previousNumber += nextNumber;
             nextNumber += previousNumber;
-            System.out.print(" " + previousNumber);
-            System.out.print(" " + nextNumber);
-        }
+            }
         }
 }

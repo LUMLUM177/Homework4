@@ -3,10 +3,12 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
+        task5();
     }
         public static void task1() {
-        int i = 1;
-        while (i <= 10){
+        int i = 0;
+        while (i < 10){
             System.out.print(++i + " ");
         }
         System.out.println();
@@ -32,4 +34,33 @@ public class Main {
             }
         }
     }
+        public static void task4() {
+        for (int i = 1; i <= 30; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println(i + ": ping pong");
+            }
+            else if (i % 3 == 0) {
+                System.out.println(i + ": ping ");
+            }
+            else if (i % 5 == 0) {
+                System.out.println(i + ": pong");
+            }
+            else {
+                System.out.println(i + ":");
+            }
+        }
+    }
+        public static void task5() {
+        int first = 0;
+        int second = 1;
+        int nextNumber = 0;
+        int previousNumber = first + second;
+        System.out.print(first);
+        for (int i = 0; i < 10; i++) {
+            previousNumber += nextNumber;
+            nextNumber += previousNumber;
+            System.out.print(" " + previousNumber);
+            System.out.print(" " + nextNumber);
+        }
+        }
 }
